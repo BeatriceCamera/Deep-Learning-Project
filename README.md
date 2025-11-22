@@ -26,8 +26,8 @@ The model follows a **dual-branch architecture**:
 - **LSTM branch:** processes tokenized and embedded textual reviews.  
 
 After independent processing, the two representations are **concatenated** and passed to shared dense layers that produce:  
-- a **sigmoid output** for binary classification,  
-- a **linear output** for score regression.  
+- an **output** for binary classification,  
+- an **output** for score regression.  
 
 Training uses a **custom multi-output loss function** combining *binary cross-entropy* and *mean squared error*, balanced with weighting factors *(λ₁, λ₂)*.
 
